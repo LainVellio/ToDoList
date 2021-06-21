@@ -1,0 +1,37 @@
+projects:
+  - title: "Семья"
+    todos:
+      - todo_id: 1
+        text: "Купить молоко"
+        isCompleted: false
+      - todo_id: 2
+        text: "Заменить масло в двигателе до 23 апреля"
+        isCompleted: false
+      - todo_id: 3
+        text: "Отправить письмо бабушке"
+        isCompleted: true
+      - todo_id: 4
+        text: "Заплатить за квартиру"
+        isCompleted: false
+      - todo_id: 5
+        text: "Забрать обувь из ремонта"
+        isCompleted: false
+  - title: "Работа"
+    todos:
+      - todo_id: 1
+        text: "Позвонить заказчику"
+        isCompleted: true
+      - todo_id: 2
+        text: "Отправить документы"
+        isCompleted: true
+      - todo_id: 3
+        text: "Заполнить отчет"
+        isCompleted: false
+  - title: "Прочее"
+    todos:
+      - todo_id: 1
+        text: "Позвонить другу"
+        isCompleted: false
+      - todo_id: 2
+        text: "Подготовиться к поездке"
+        isCompleted: false
