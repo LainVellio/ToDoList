@@ -5,7 +5,7 @@ class TodosController < ApplicationController
     if todo = Todo.where(project_id: params[:project_id]).find_by(todo_id: params[:id])
         todo.update(isCompleted: !todo.isCompleted)
         render json: todo, status: :ok
-    else render json: {errors: "bad request"}, status: :unprocessable_entity
+    else render json: {errors: "task not found"}, :status => 404
     end
   end
 
