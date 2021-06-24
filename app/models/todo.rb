@@ -4,7 +4,7 @@ class Todo < ApplicationRecord
 
   def as_json(options = {})
     super(
-      :only => [:todo_id, :text, :isCompleted, :errors]
+      :only => [:todoId, :text, :isCompleted, :errors]
     )
   end
 end

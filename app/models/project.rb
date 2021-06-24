@@ -6,7 +6,7 @@ class Project < ApplicationRecord
     super (options || { }).merge( 
       :include => { 
          :todos => { 
-         :only => [:todo_id, :text, :isCompleted] },     
+         :only => [:todoId, :text, :isCompleted] },     
       }, 
         :except => [:created_at, :updated_at] )
  end
