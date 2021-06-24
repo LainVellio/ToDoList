@@ -1,10 +1,10 @@
 class CreateTodos < ActiveRecord::Migration[6.1]
   def change
-    create_table :todos do |t|
-      t.bigint :todo_id
+      create_table :todos do |t|
+      t.bigint :todoId
       t.string :text
       t.boolean :isCompleted, default: false
-      t.belongs_to :project, foreign_key: true
+      t.belongs_to :project
       
       t.timestamps
     end

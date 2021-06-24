@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2021_06_18_083021) do
   end
 
   create_table "todos", force: :cascade do |t|
-    t.bigint "todo_id"
+    t.bigint "todoId"
     t.string "text"
     t.boolean "isCompleted", default: false
     t.bigint "project_id"
@@ -31,5 +31,4 @@ ActiveRecord::Schema.define(version: 2021_06_18_083021) do
     t.index ["project_id"], name: "index_todos_on_project_id"
   end
 
-  add_foreign_key "todos", "projects"
 end
