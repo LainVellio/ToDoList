@@ -12,13 +12,13 @@ class TodosController < ApplicationController
   def create
     if project = Project.find_by(title: params[:title])
       new_todo = project.todos.new(text: params[:text],
-      todo_id: project.todos.size + 1)
+      todoId: project.todos.size + 1)
                   
       elsif new_project = Project.new(title: params[:title])
         if new_project.save
         else return render json: {errors: new_project.errors}, status: :unprocessable_entity
         end
-        new_todo = new_project.todos.new(text: params[:text], todo_id: 1)
+        new_todo = new_project.todos.new(text: params[:text], todoId: 1)
         end
 
       if new_todo.save
