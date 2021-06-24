@@ -2,7 +2,7 @@ class TodosController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def update
-    if todo = Todo.where(project_id: params[:project_id]).find_by(todo_id: params[:id])
+    if todo = Todo.where(project_id: params[:project_id]).find_by(todoId: params[:id])
         todo.update(isCompleted: !todo.isCompleted)
         render json: todo, status: :ok
     else render json: {errors: "task not found"}, :status => 404
