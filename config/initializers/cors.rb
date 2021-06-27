@@ -1,6 +1,6 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'http://localhost:4200'
+    origins 'https://vellio-angular-todo-app.herokuapp.com'
 
     resource '*',
       headers: :any,
