@@ -23,6 +23,18 @@ class TodosController < ApplicationController
 
       if new_todo.save
       else render json: {errors: new_todo.errors}, status: :unprocessable_entity
+      end      
+  end
+    
+    def destroy
+      if todo = Todo.where(project_id: params[:project_id]).find_by(todoId: params[:id])
+        todo.destroy
+        project = Todo.where(project_id: params[:project_id])
+        todo_id = 1
+        project.each do |todo|
+          todo.update(todoId: todo_id)
+          todoId += 1
+        end
       end
     end
 end
