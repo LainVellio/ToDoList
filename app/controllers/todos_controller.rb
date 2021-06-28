@@ -14,7 +14,7 @@ class TodosController < ApplicationController
       new_todo = project.todos.new(text: params[:text],
       todoId: project.todos.size + 1)
                   
-      elsif new_project = Project.new(title: params[:title], id: Project.all.size + 1)
+      elsif new_project = Project.new(id: Project.all.size + 1, title: params[:title])
         if new_project.save
         else return render json: {errors: new_project.errors}, status: :unprocessable_entity
         end
