@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 2021_06_18_083021) do
   end
 
   create_table "todos", force: :cascade do |t|
-    t.bigint "todoId"
     t.string "text"
     t.boolean "isCompleted", default: false
     t.bigint "project_id"
