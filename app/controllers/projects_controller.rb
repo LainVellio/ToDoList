@@ -5,4 +5,8 @@ class ProjectsController < ApplicationController
     projects = Project.all
     render json: projects      
   end
+
+  def destroy
+    Project.find(params[:id]).destroy
+  end
 end

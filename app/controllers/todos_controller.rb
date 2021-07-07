@@ -11,7 +11,9 @@ class TodosController < ApplicationController
 
   def create
     project = Project.where(title: params[:title]).first_or_create 
-    project.todos.create(text: params[:text])
+    todo = project.todos.create(text: params[:text])
+    render json: project, status: :ok
   end
+
 end
   
