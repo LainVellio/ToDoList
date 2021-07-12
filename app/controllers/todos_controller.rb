@@ -15,5 +15,8 @@ class TodosController < ApplicationController
     render json: {id: project.id, title: project.title, todos: [todo]}, status: :ok
   end
 
+  def destroy
+    Todo.find(params[:id]).destroy
+  end
 end
   
